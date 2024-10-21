@@ -12,7 +12,7 @@ def view():
 @app.route('/recommend',methods=['POST'])
 def recommend_top5():
     print(request.method)
-    user_name = request.form['User Name']
+    user_name = request.form['User']
     print('User name=',user_name)
 
     result = get_recommended_products(user_name)
