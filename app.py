@@ -24,7 +24,8 @@ def recommend_top5():
                                products=result.name.to_list(),
                                brands=result.brand.to_list(),
                                manufacturers=result.manufacturer.to_list(),
-                               text='Recommended Products') 
+                               text='Recommended Products',
+                               zip=zip) 
     else:
         return render_template('home.html', text=result) 
     
