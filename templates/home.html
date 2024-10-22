@@ -21,27 +21,30 @@
    <br>
  </div>
  <div class="alert alert-success" role="alert">
- {{text}}
+ {{ text }}
 </div>
 
-<table class="table">
+<div>
+<table class="table table-striped">
   <thead>
-      <tr>
-          <th scope="col">Product</th>
-          <th scope="col">Brand</th>
-          <th scope="col">Manufacturer</th>
-      </tr>
+    <tr>
+        {% for col in col_names %}
+            <th>{{ col }}</th>
+        {% endfor %}
+    </tr>
   </thead>
+
   <tbody>
-  {% for row in data %}
-      <tr>
-          <td>{{row['name']}}</td>
-          <td>{{row['brand']}}</td>
-          <td>{{row['manufacturer']}}</td>
-      </tr>
-  {% endfor %}
+    {% for product, brand, manufacturer in zip(products,brands,manufacturers) %}
+    <tr>      
+      <td>{{product}}</td>
+      <td>{{brand}}</td>
+      <td>{{manufacturer}}</td>      
+    </tr>
+    {% endfor %}
   </tbody>
 </table>
+</div>
 
 
 </body>
