@@ -18,8 +18,8 @@
 </head>
 
 <body>
- <div class="login" style="text-align:center;">
-	<h1 style="text-align:center;">Recommend Top 5 Products</h1>
+ <div class="login">
+	<h1>Recommend Top 5 Products</h1>
     <form action="{{ url_for('recommend_top5')}}"method="POST">
       <input type="text" name="User" placeholder="Try any of the following" required="required" /><br>
       <br>
@@ -28,13 +28,13 @@
    <br>
    <br>
  </div>
- <div class="alert alert-success" role="alert" style="color:blue;text-align:center;font-size:160%;">
+ <div class="alert alert-success" role="alert" style="color:blue;font-size:160%;">
  {{ text }}
  <br>
 </div>
 
 <div >
-<table class="table table-striped center">
+<table class="table table-striped">
   <thead>
     <tr>
         {% for col in col_names %}
