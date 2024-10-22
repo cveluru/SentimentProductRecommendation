@@ -20,7 +20,7 @@ def recommend_top5():
 
     if isinstance(result, pd.DataFrame):
         # return render_template('home.html',column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip, text='Recommended products')
-        return render_template('home.html',text=result.to_html()) 
+        return render_template('home.html', name=result.to_html(), text='Recommended Products') 
     else:
         return render_template('home.html',text=result) 
     
