@@ -16,6 +16,7 @@ def recommend_top5():
     print('User name=',user_name)
 
     result = get_recommended_products(user_name)
+    print(result)
 
     if isinstance(result, pd.DataFrame):
         return render_template('home.html',column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip, text='Recommended products')
