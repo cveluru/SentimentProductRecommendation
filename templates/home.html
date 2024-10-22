@@ -24,7 +24,24 @@
  {{text}}
 </div>
 
-<h1>{{name}}</h1>
+<table class="table">
+  <thead>
+      <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Manufacturer</th>
+      </tr>
+  </thead>
+  <tbody>
+  {% for row in data %}
+      <tr>
+          <td>{{row['name']}}</td>
+          <td>{{row['brand']}}</td>
+          <td>{{row['manufacturer']}}</td>
+      </tr>
+  {% endfor %}
+  </tbody>
+</table>
 
 
 </body>
